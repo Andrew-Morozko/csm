@@ -18,7 +18,7 @@ func TestChanMachine(t *testing.T) {
 	ca := make(chan struct{})
 	cb := make(chan struct{})
 
-	// Example of complex selector
+	// Example of a complex selector
 	sm.StateSelector(And(Not(InState(a, b)))).AddEvents()
 
 	a.AddEvents(
@@ -64,7 +64,7 @@ func TestChanMachine(t *testing.T) {
 	}()
 
 	sm.Run(a)
-	// Right now debugging using tests, so failing to view output
+	// Right now debugging using tests, so failing to view the output
 	// I know it's wrong ;)
 	t.Fail()
 }
