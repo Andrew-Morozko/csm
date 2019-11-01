@@ -3,7 +3,7 @@ Channel-based State Machine
 
 Currently in proof-of-concept stage, see example in [csm_test.go](https://github.com/Andrew-Morozko/csm/blob/master/csm_test.go).
 
-This is a prototype of a pattern that emerged while developing [orca](https://github.com/Andrew-Morozko/orca).
+This is a prototype of a [pattern that emerged](https://github.com/Andrew-Morozko/orca/blob/6a0603e3031e8f0ebec7dbd47274e475b90a7e75/orca/containeruser.go#L132) while developing [orca](https://github.com/Andrew-Morozko/orca).
 CSM is a wrapper around a `select` that automates a bunch of useful patterns:
 * On channel recv/send transition to some other state of the state machine
 * Channels are actively being `select`ed only in some of the states
